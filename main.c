@@ -1,26 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) { 
+int main(int argc, char *argv[]) {
+
+ char str[30] = "happy C programming";
   
-  int i = 0;
-  char str[4];
-  str[0] = 'a';
-  str[1] = 'b';
-  str[2] = 'c';
-  str[3] = '\0';
-  
-  printf("%s\n", str);
-  
-  while(str[i] != '\0')
-  {
-	printf("%c", str[i]);
-	i++;
-}
+ printf("문자열 %s의 길이  : %i\n", str, strlen(str));
+
+  return 0;
+
 }
 
 
 
+ 
 

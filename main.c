@@ -6,24 +6,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	FILE*fp;
-	char str[30];
+	FILE*fp = NULL;
+	char c;
+	fp = fopen("sample.txt", "r");
 	
-	fp = fopen("sample.txt", "w");
 	
-	printf("input a word:");
-	scanf("%s", str);
-	fprintf(fp, "%s\n",str);
+	c = fgetc(fp); // 글자 하나 가져오는 코드  
 	
-	printf("input a word:");
-	scanf("%s", str);
-	fprintf(fp, "%s\n",str);
+	while( (c = fgetc(fp)) != EOF) // 문자변수 = fgetc(파일 포인터)
+	    putchar(c);
 	
-	printf("input a word:");
-	scanf("%s", str);
-	fprintf(fp, "%s\n",str);
-	
-}
+	fclose(fp);
+	}
 
 
 
